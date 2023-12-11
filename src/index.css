@@ -20,3 +20,48 @@
     background-color: #1e1e1e;
 
 }
+
+.reply-container{
+    border-radius: 50%;
+    padding: 8px;
+    width: 35px;
+    height: 35px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.reply-container:hover{
+    background-color: rgba(59, 176, 235, 0.25); /* Adjust the last number (0.5) for opacity */
+}
+
+.repost-container{
+    border-radius: 50%;
+    padding: 8px;
+    width: 35px;
+    height: 35px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.repost-container:hover{
+    background-color: rgba(46, 204, 113, 0.25); /* Adjust the last number (0.5) for opacity */
+}
+
+.like-container{
+    border-radius: 50%;
+    padding: 8px;
+    width: 35px;
+    height: 35px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.like-container:hover{
+    background-color: rgba(242, 38, 19, 0.25); /* Adjust the last number (0.5) for opacity */
+}
+
+.heart-clicked {
+    color: red;
+}
+
+.repost-clicked {
+    color: green;
+}
+
