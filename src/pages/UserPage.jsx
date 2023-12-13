@@ -6,7 +6,9 @@ import UserPost from "../components/UserPost";
 const UserPage = () => {
     return <>
         <UserHeader />
-        <UserPost />
+        <UserPost likes={1432} replies={103} postImg="/post1.jpeg" postTitle="this is it "/>
+        <UserPost likes={329} replies={42} postImg="/post2.png" postTitle="wow its another post "/>
+        <UserPost likes={243} replies={13} postImg="/post3.png" postTitle="the grammer doesnt matter in these "/>
     </>;
 };
 
