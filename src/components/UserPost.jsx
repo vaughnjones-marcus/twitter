@@ -6,7 +6,7 @@ import { Image } from '@chakra-ui/react';
 import Actions from "../components/Actions";
 
 
-const UserPost = () => {
+const UserPost = ({postImg,postTitle,likes,replies}) => {
   return (
     <Link to={ "/marcusv663/post/1"}>
         <Flex gap={3} mb={4} py={5}>
@@ -16,7 +16,7 @@ const UserPost = () => {
         <Flex flex={1} flexDirection={"column"} gap={2}>
         <Flex justifyContent={"space-between"} w={"full"}>
             <Flex w={"full"} alignItems={"center"}>
-            <Text fontsize={"sm"} fontWeight={"bold"}>Marcus Vaughn-Jones </Text>
+            <Text fontSize={"sm"} fontWeight={"bold"}>Marcus Vaughn-Jones </Text>
 
             <Text ml={1} color={"gray.light"}>  @marcusv663</Text>
             <Box ml={1} w="1" h="1" bg={"gray.light"} borderRadius={"full"}></Box>
@@ -27,14 +27,19 @@ const UserPost = () => {
             </Flex>
         </Flex>
 
-        <Text fontSize={"sm"}> This is my first post let see what happens when i add a lot of text and how it looks on a second line</Text>
-        <Box borderRadius={6} overflow={"hidden"} border={"1px solid"} borderColor={"gray.light"}>
-            <Image src='/post1.jpeg' w={"full"} />
+        <Text fontSize={"sm"}> {postTitle} </Text>
+        {postImg && (
 
+        <Box borderRadius={6} overflow={"hidden"} border={"1px solid"} borderColor={"gray.light"}>
+            <Image src={postImg} w={"full"} />
         </Box>
+        
+        )}
+
+        
 
         <Flex gap={3} my={1}> 
-            <Actions />
+            <Actions likes={likes} replies={replies}/>
         </Flex>
         </Flex>
         </Flex>

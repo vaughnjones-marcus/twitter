@@ -4,7 +4,7 @@ import { IoChatbubbleOutline } from "react-icons/io5";
 import { CiRepeat } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { GoShare } from "react-icons/go";
-const Actions = () => {
+const Actions = ({likes,replies}) => {
     const [isHeartClicked, setIsHeartClicked] = useState(false);
 
     const handleHeartClick = () => {
@@ -22,7 +22,7 @@ const Actions = () => {
         <Flex justifyContent="space-between" alignItems="center" w="full">
             <Flex>
                 <IoChatbubbleOutline className='reply-container'/>
-                <Text ml={2} color={"gray.light"} marginTop={1}>15</Text>
+                <Text ml={2} color={"gray.light"} marginTop={1}>{replies}</Text>
             </Flex>
             <Flex>
                 <CiRepeat 
@@ -39,7 +39,7 @@ const Actions = () => {
                 size={18}
                 onClick={handleHeartClick}
                 />
-                <Text ml={2} color={"gray.light"} marginTop={1}>409</Text>
+                <Text ml={2} color={"gray.light"} marginTop={1}>{likes}</Text>
             </Flex>
                 <GoShare className='reply-container' size={16}/>
         </Flex>
