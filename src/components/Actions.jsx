@@ -4,11 +4,14 @@ import { IoChatbubbleOutline } from "react-icons/io5";
 import { CiRepeat } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { GoShare } from "react-icons/go";
-const Actions = ({likes,replies}) => {
+const Actions = ({likes, replies, onLike}) => {
     const [isHeartClicked, setIsHeartClicked] = useState(false);
 
     const handleHeartClick = () => {
         setIsHeartClicked(!isHeartClicked);
+        if (!isHeartClicked) {
+            onLike();
+        }
     };
 
     const [isRepostClicked, setIsRepostClicked] = useState(false);
