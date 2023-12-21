@@ -2,6 +2,7 @@ import { Avatar, Flex, Text, Box, Image } from '@chakra-ui/react';
 import { BsThreeDots } from 'react-icons/bs';
 import  Actions  from "../components/Actions";
 import { useState } from 'react';
+import { Divider } from '@chakra-ui/react';
 
 const PostPage = () => {
     const [liked, setLiked] = useState(false);
@@ -24,16 +25,17 @@ const PostPage = () => {
             </Flex>
         </Flex>
 
-        <Text my={3}> Let's talk about Threads.</Text>
+        <Text my={3}> Let's talk about twitter.</Text>
 
         <Box borderRadius={6} overflow={"hidden"} border={"1px solid"} borderColor={"gray.light"}>
             <Image src={"/post1.jpeg"} w={"full"} />
         </Box>
 
+        <Divider my={4}/>
         <Flex gap={3} my={3}>
-            <Actions liked={liked} setLiked={setLiked} likes={likes} onLike={() => setLikes(likes + 1)}/>
+            <Actions liked={liked} setLiked={setLiked} likes={likes} onLike={(change) => setLikes(likes + change)}/>
         </Flex>
-
+        <Divider my={4}/>
     </>;
 };
 

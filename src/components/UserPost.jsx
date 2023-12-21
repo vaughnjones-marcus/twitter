@@ -4,7 +4,7 @@ import { Avatar } from '@chakra-ui/avatar';
 import { BsThreeDots } from 'react-icons/bs';
 import { Image } from '@chakra-ui/react';
 import Actions from "../components/Actions";
-
+import { Divider } from '@chakra-ui/react';
 
 const UserPost = ({postImg,postTitle,likes,replies}) => {
   return (
@@ -43,6 +43,7 @@ const UserPost = ({postImg,postTitle,likes,replies}) => {
         </Flex>
         </Flex>
         </Flex>
+        <Divider/>
     </Link>
   )
 }

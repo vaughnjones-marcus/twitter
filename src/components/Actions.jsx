@@ -10,7 +10,9 @@ const Actions = ({likes, replies, onLike}) => {
     const handleHeartClick = () => {
         setIsHeartClicked(!isHeartClicked);
         if (!isHeartClicked) {
-            onLike();
+            onLike(1);
+        } else{
+            onLike(-1);
         }
     };
 
