@@ -3,6 +3,7 @@ import { BsThreeDots } from 'react-icons/bs';
 import  Actions  from "../components/Actions";
 import { useState } from 'react';
 import { Divider } from '@chakra-ui/react';
+import { Button } from '@chakra-ui/react';
 
 const PostPage = () => {
     const [liked, setLiked] = useState(false);
@@ -35,6 +36,18 @@ const PostPage = () => {
         <Flex gap={3} my={3}>
             <Actions liked={liked} setLiked={setLiked} likes={likes} onLike={(change) => setLikes(likes + change)}/>
         </Flex>
+        <Divider my={4}/>
+
+        <Flex justifyContent={"space-between"}>
+            <Flex gap={2} alignItems={"center"}>
+                <Avatar src='/egg.png' size={"md"} />
+                <Text color={"gray.light"} ml={3}>Post your reply</Text>
+            </Flex>
+            <Button>
+                Reply
+            </Button>
+        </Flex>
+
         <Divider my={4}/>
     </>;
 };
