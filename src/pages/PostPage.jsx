@@ -4,6 +4,7 @@ import  Actions  from "../components/Actions";
 import { useState } from 'react';
 import { Divider } from '@chakra-ui/react';
 import { Button } from '@chakra-ui/react';
+import Replies from '../components/Replies';
 
 const PostPage = () => {
     const [liked, setLiked] = useState(false);
@@ -49,6 +50,9 @@ const PostPage = () => {
         </Flex>
 
         <Divider my={4}/>
+        <Replies />
+        <Replies />
+        <Replies />
     </>;
 };
 
