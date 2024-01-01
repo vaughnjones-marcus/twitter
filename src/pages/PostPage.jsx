@@ -50,9 +50,30 @@ const PostPage = () => {
         </Flex>
 
         <Divider my={4}/>
-        <Replies />
-        <Replies />
-        <Replies />
+        <Replies 
+        comment="This look really good"
+        createdAt="2d"
+        likes={100}
+        username="johndoe"
+        userAvatar="https://bit.ly/dan-abramov"
+        at="@R4ndom1"
+        />
+        <Replies 
+        comment="a diffrent really long reply so i can see what heppans when we have a line break. I think this is long enough!"
+        createdAt="1d"
+        likes={274}
+        username="Sucram"
+        userAvatar="https://bit.ly/tioluwani-kolawole"
+        at="@JVM"
+        />
+        <Replies 
+        comment="cool dude."
+        createdAt="56d"
+        likes={378}
+        username="jamar ramsey"
+        userAvatar="https://bit.ly/kent-c-dodds"
+        at="@Dolfinsfin5"
+        />
     </>;
 };
 
