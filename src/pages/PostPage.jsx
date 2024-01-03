@@ -13,16 +13,19 @@ const PostPage = () => {
         <Flex>
             <Flex w={"full"} alignItems={"center"} gap={3}>
                 <Avatar src='/egg.png' size={"md"} name='Marcus Vaughn-Jones' />
-                <Flex>
+                <Flex alignItems={"center"}>
                     <Text fontSize={"sm"} fontWeight={"bold"}>
+                        Marcus Vaughn-Jones
+                    </Text>
+
+                    <Text fontSize={"sm"} ml={1} color={"gray.light"}>
                         @MVJ
                     </Text>
+                    <Box ml={1} w="1" h="1" bg={"gray.light"} borderRadius={"full"}></Box>
+                    <Text ml={1} fontStyle={"sm"} color={"gray.light"}>1d</Text>
                 </Flex>
             </Flex>
             <Flex gap={4} alignItems={"center"}>
-                <Text fontSize={"sm"} color={"gray.light"}>
-                    1d 
-                </Text>
                 <BsThreeDots cursor={"pointer"} />
             </Flex>
         </Flex>
